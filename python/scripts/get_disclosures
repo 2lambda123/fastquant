@@ -15,9 +15,7 @@ import matplotlib.pyplot as pl
 from fastquant import DisclosuresPSE
 from fastquant import DATA_PATH
 
-parser = argparse.ArgumentParser(
-    description="download company disclosures data"
-)
+parser = argparse.ArgumentParser(description="download company disclosures data")
 parser.add_argument("symbol", type=str, help="company symbol")
 parser.add_argument(
     "-t1",

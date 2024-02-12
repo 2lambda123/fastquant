@@ -21,6 +21,7 @@ def test_get_pse_data():
     stock_df = get_pse_data(PHISIX_SYMBOL, DATE_START, DATE_END, format="c")
     assert isinstance(stock_df, pd.DataFrame)
 
+
 # Unused functions which haven't been tested since newest yfinance update
 # def test_get_yahoo_data():
 #     stock_df = get_yahoo_data(YAHOO_SYMBOL, DATE_START, DATE_END)
@@ -62,7 +63,7 @@ def test_get_crypto_data():
     for ex in CRYPTO_EXCHANGES:
         # Github actions for fastquant uses US server, which doesn't have access to binance
         # Using binance elsewhere works without any issues
-        if ex == 'binance':
+        if ex == "binance":
             continue
         crypto_df = get_crypto_data(
             exchange_pairs[ex], DATE_START, DATE_END, exchange=ex

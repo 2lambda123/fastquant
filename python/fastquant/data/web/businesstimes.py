@@ -76,8 +76,8 @@ def get_bt_news_sentiment(keyword, page_nums=None):
     date_sentiment = {}
 
     for k, v in date_sentiments.items():
-        date_sentiment[
-            datetime.strptime(k, "%d %b %Y").date() + timedelta(days=1)
-        ] = round(sum(v) / float(len(v)), 3)
+        date_sentiment[datetime.strptime(k, "%d %b %Y").date() + timedelta(days=1)] = (
+            round(sum(v) / float(len(v)), 3)
+        )
 
     return date_sentiment

@@ -16,7 +16,6 @@ import backtrader as bt
 
 
 class CustomIndicator(bt.Indicator):
-
     """
     Custom Indicator
     """
