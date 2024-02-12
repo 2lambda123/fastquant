@@ -106,9 +106,9 @@ def analyze_strategies(
                 periodic_history_df["dt"] = pd.to_datetime(periodic_history_df.dt)
                 periodic_history_df.insert(0, "strat_name", history_key)
                 periodic_history_df.insert(0, "strat_id", strat_idx)
-                periodic_history_df[
-                    "return"
-                ] = periodic_history_df.portfolio_value.pct_change()
+                periodic_history_df["return"] = (
+                    periodic_history_df.portfolio_value.pct_change()
+                )
                 periodic_history_dfs.append(periodic_history_df)
 
                 indicators_df.insert(0, "strat_name", history_key)

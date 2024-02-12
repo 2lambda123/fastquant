@@ -16,7 +16,6 @@ import backtrader as bt
 
 
 class Sentiment(bt.Indicator):
-
     """
     Sentiment Custom Indicator
     Implementation of sentiment custom indicator using nltk/textblob pre-built sentiment models
